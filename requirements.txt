@@ -1,0 +1,6 @@
+pybids
+nilearn
+datalad
+datalad-fuse
+jupytext
+matplotlib
