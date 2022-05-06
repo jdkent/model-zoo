@@ -48,6 +48,6 @@ COPY --chown=jovyan:users . .
 
 USER jovyan
 
-RUN git submodule update --init
+# RUN git submodule update --init
 
 RUN pip install -r requirements.txt
