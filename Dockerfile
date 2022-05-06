@@ -44,6 +44,8 @@ RUN apt-get update -qq \
 
 COPY requirements.txt .
 
+COPY . .
+
 USER jovyan
 
 RUN pip install -r requirements.txt
