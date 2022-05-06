@@ -42,10 +42,12 @@ RUN apt-get update -qq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY --chown=jovyan:users requirements.txt .
 
-COPY . .
+COPY --chown=jovyan:users . .
 
 USER jovyan
+
+RUN git submodule update --init
 
 RUN pip install -r requirements.txt
